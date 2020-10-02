@@ -47,7 +47,7 @@ THIRD_PARTY_APPS = [
     'social_django',
     'rest_framework', 
     'corsheaders',
-    'import_export', 
+    # 'import_export', 
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
