@@ -73,5 +73,5 @@ class GenSourceCore:
         input_dir_name = 'output/'+ project_name
         shutil.make_archive(output_filename , 'zip', input_dir_name)
 
-        return 'http://localhost:8000/output/'+ project_name + date_time +'.zip'
+        return 'http://34.126.84.178/output/'+ project_name + date_time +'.zip'
 
