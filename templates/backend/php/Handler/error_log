@@ -1,0 +1,7 @@
+[17-Apr-2020 14:11:59 UTC] PHP Fatal error:  Class 'Slim\Handlers\Error' not found in /home/hoctien1/public_html/hce/hce-api/src/Handler/ApiError.php on line 8
+[18-Apr-2020 01:33:31 UTC] PHP Fatal error:  Class 'Slim\Handlers\Error' not found in /home/hoctien1/public_html/hce/hce-api/src/Handler/ApiError.php on line 8
+[21-Apr-2020 21:30:32 UTC] PHP Fatal error:  Class 'Slim\Handlers\Error' not found in /home/hoctien1/public_html/hce/hce-api/src/Handler/ApiError.php on line 8
+[22-Apr-2020 11:28:11 UTC] PHP Fatal error:  Class 'Slim\Handlers\Error' not found in /home/hoctien1/public_html/hce/hce-api/src/Handler/ApiError.php on line 8
+[23-Apr-2020 06:58:34 UTC] PHP Fatal error:  Class 'Slim\Handlers\Error' not found in /home/hoctien1/public_html/hce/hce-api/src/Handler/ApiError.php on line 8
+[24-Apr-2020 09:51:09 UTC] PHP Fatal error:  Class 'Slim\Handlers\Error' not found in /home/hoctien1/public_html/hce/hce-api/src/Handler/ApiError.php on line 8
+[28-Apr-2020 00:06:37 UTC] PHP Fatal error:  Class 'Slim\Handlers\Error' not found in /home/hoctien1/public_html/hce/hce-api/src/Handler/ApiError.php on line 8

@@ -1,0 +1,95 @@
+<div class="title-dialog text-center" role="alert">
+  <h5 class="text-uppercase font-weight-bolder" i18n>Thông tin tài khoản</h5>
+</div>
+<mat-card class="border border-dialog">
+  <mat-card-content class="custom-overflow">
+    <form [formGroup]="form" class="col-md-12">
+      <div class="row">
+
+        <p>Mật khẩu mặt định sau khi thêm là: password</p>
+
+        <!-- name field -->
+        <div class="col-md-12">
+          <mat-form-field class="example-full-width">
+            <mat-label i18n>Tên <span class="text-red">*</span></mat-label>
+            <input matInput [(ngModel)]="input.name" formControlName="name">
+          </mat-form-field>
+
+          <div *ngIf="form.controls['name'].invalid && (form.controls['name'].dirty || form.controls['name'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="form.controls['name'].errors.required" i18n>
+              Vui lòng nhập tên của bạn
+            </div>
+            <div *ngIf="form.controls['name'].errors.maxlength" i18n>
+              Bạn không được nhập quá 100 ký tự
+            </div>
+            <div *ngIf="form.controls['name'].errors.minlength" i18n>
+              Bạn vui lòng nhập ít nhất 5 ký tự
+            </div>
+          </div>
+        </div>
+
+        <!-- email field -->
+        <div class="col-md-12">
+          <mat-form-field class="example-full-width">
+            <mat-label i18n>Email <span class="text-red">*</span></mat-label>
+            <input matInput [(ngModel)]="input.email" formControlName="email" [required]="'true'" placeholder="email">
+          </mat-form-field>
+
+          <div
+            *ngIf="form.controls['email'].invalid && (form.controls['email'].dirty || form.controls['email'].touched)"
+            class="alert alert-danger">
+            <div *ngIf="form.controls['email'].errors.required" i18n>
+              Bắt buộc nhập trường này
+            </div>
+            <div *ngIf="form.controls['email'].errors.maxlength" i18n>
+              Bạn không được nhập quá 255 ký tự
+            </div>
+            <div *ngIf="form.controls['email'].errors.minlength" i18n>
+              Bạn vui lòng nhập ít nhất 5 ký tự
+            </div>
+            <div *ngIf="form.controls['email'].errors.email" i18n>
+              Bạn phải nhập đúng định dạng email
+            </div>
+          </div>
+        </div>
+
+        <!-- createdate date field -->
+        <div class="col-md-12">
+          <mat-form-field appearance="fill">
+            <mat-label i18n>Ngày tạo <span class="text-red">*</span></mat-label>
+            <input matInput [(ngModel)]="input.created_date" formControlName="created_date" [matDatepicker]="dp"
+              [formControl]="date">
+            <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+            <mat-datepicker #dp></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+      </div>
+    </form>
+  </mat-card-content>
+
+  <!-- start radio permission-->
+  <div class="col-md-12 d-flex justify-content-between" *ngFor="let component of listComponents,let i=index">
+    <div class="name-component">
+      <p>{{component.viewValue}}: </p>
+    </div>
+    <div class="option">
+      <mat-radio-group *ngIf="permissions.length>0" aria-label="Select an option" [(ngModel)]="permissions[i].option">
+        <mat-radio-button class="mr-md-5" [value]="option.value" *ngFor="let option of options">{{option.viewValue}}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+  <!--end permission-->
+
+</mat-card>
+
+<!--Modal -->
+<div class="text-center" style="margin-top: 10px;">
+  <button type="button" cdkFocusInitial (click)="onBtnUpdateClick()" class="btn btn-success btn-fw mr-3" i18n>
+    <i class="fa fa-check"></i>
+    Đồng ý</button>
+  <button class="btn btn-warning custom-margin-button" [mat-dialog-close]="data.animal" i18n> <i
+      class="fa fa-times"></i> Đóng</button>
+</div>

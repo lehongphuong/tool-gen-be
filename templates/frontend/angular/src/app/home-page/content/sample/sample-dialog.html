@@ -1,0 +1,22 @@
+<div class=" text-center title-dialog" role="alert">
+  <h5 class="text-uppercase font-weight-bolder" i18n>phuong0</h5>
+</div>
+<mat-card class="border border-dialog">
+
+  <mat-card-content class="custom-overflow">
+    <form [formGroup]="form" class="col-md-12">
+      <div class="row">
+phuong1
+      </div>
+    </form>
+
+  </mat-card-content>
+</mat-card>
+
+<!--Modal -->
+<div class="text-center " style="margin-top:10px">
+  <button type="button" [disabled]="!form.valid" cdkFocusInitial (click)="onBtnSubmitClick()" class="btn btn-success btn-fw mr-3 repon w-120"
+    i18n> <i class="fa fa-check"></i> Đồng ý</button>
+  <button class="btn btn-warning custom-margin-button repon w-120" [mat-dialog-close]="data.animal" i18n> <i
+      class="fa fa-times"></i> Đóng</button>
+</div>
